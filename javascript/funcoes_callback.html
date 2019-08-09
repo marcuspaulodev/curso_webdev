@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Javascript</title>
+        <script>
+
+            function exibirArtigo(id, callbackSucesso, callbackErro){
+                //Logica: Recuperar artigo por http
+                if(true){
+                    callbackSucesso('Funcoes', 'callback');
+                }
+                else{
+                    callbackErro('Erro ao recuperar os dados');
+                }
+            }
+
+            var cbSucesso = function(titulo,descricao){
+                document.write('<h1> '+ titulo+'</h1>');
+                document.write('<hr/>');
+                document.write('<p>' + descricao +'</p>');
+            }
+            var cbErro = function(erro){
+                document.write('<p><b>ERRO: </b>'+erro+'</p>');
+
+            }
+
+            exibirArtigo(1,cbSucesso,cbErro);
+
+        </script>
+        
+    </head>
+
+    <body>
+        
+        
+    </body>
+
+
+</html>
